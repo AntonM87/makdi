@@ -1,0 +1,4238 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,800");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: 'Open Sans', sans-serif; }
+
+@media (max-width: 767px) {
+  .opacity-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none; }
+
+  #modal-window {
+    background: #fff;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    display: none; }
+
+  #close-for-2gis {
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    z-index: 7;
+    color: #000;
+    cursor: pointer;
+    font-size: 48px; }
+
+  #map {
+    height: 100%;
+    width: 100%; }
+
+  .doubleGis {
+    cursor: pointer;
+    color: #572b17; }
+    .doubleGis:hover {
+      text-decoration: underline; }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 170px; }
+
+  .left {
+    display: none; }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    padding: 15px;
+    margin: auto 5%; }
+    .center img {
+      width: 108px;
+      height: 116px; }
+    .center span {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      text-align: center;
+      letter-spacing: .3px;
+      font-size: 14px;
+      font-weight: 600; }
+
+  .right {
+    display: none; }
+
+  .bottom-content {
+    display: none; }
+
+  #preloader {
+    position: fixed;
+    top: 0;
+    height: 0;
+    width: 100%;
+    height: 100%; }
+    #preloader #gray {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      height: 50%;
+      margin-left: -54px;
+      margin-top: -58px;
+      background: url("logo-gray.png");
+      background-size: cover;
+      width: 108px;
+      height: 0px; }
+    #preloader #color {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      height: 50%;
+      margin-left: -54px;
+      margin-top: -58px;
+      background: url("logo.png");
+      background-size: cover;
+      width: 108px;
+      height: 116px;
+      z-index: -1; }
+
+  .main-bg-theme {
+    width: 100%;
+    min-height: 350px;
+    background: #7d4e27;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .main-bg-theme .cake {
+      width: 50%;
+      text-align: center;
+      padding: 5% 0; }
+      .main-bg-theme .cake img {
+        width: 195px;
+        height: 142px; }
+    .main-bg-theme .best {
+      width: 70%;
+      text-align: center;
+      margin-top: 20%;
+      padding-bottom: 2%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .main-bg-theme .best h1 {
+        margin-top: -100px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #fff; }
+      .main-bg-theme .best a {
+        border-radius: 5px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 200;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin-top: 22px;
+        background: #ee5635;
+        transition: 0.15s background linear; }
+
+  #content > h1 {
+    color: #6a3d1d;
+    font-size: 34px;
+    font-weight: 800;
+    font-family: arial;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 25px 0; }
+
+  .production .first-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; }
+    .production .first-row #bakery-products {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      height: 350px;
+      text-decoration: none; }
+      .production .first-row #bakery-products span {
+        flex-basis: 100%;
+        height: 100%;
+        background-size: cover !important;
+        background: url("photo3.jpg") center center no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center; }
+        .production .first-row #bakery-products span div {
+          width: 30%;
+          text-align: center;
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .first-row #cakes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      height: 350px;
+      text-decoration: none; }
+      .production .first-row #cakes span {
+        flex-basis: 100%;
+        height: 100%;
+        background-size: cover !important;
+        background: url("IMG_3571.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center; }
+        .production .first-row #cakes span div {
+          width: 30%;
+          text-align: center;
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+  .production .second-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; }
+    .production .second-row #festive-cakes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      height: 350px;
+      text-decoration: none; }
+      .production .second-row #festive-cakes span {
+        flex-basis: 100%;
+        height: 100%;
+        background-size: cover !important;
+        background: url("photo1.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center; }
+        .production .second-row #festive-cakes span div {
+          width: 60%;
+          text-align: center;
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 15px 20px 15px;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .second-row #bestsellers {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      height: 350px;
+      text-decoration: none; }
+      .production .second-row #bestsellers span {
+        flex-basis: 100%;
+        height: 100%;
+        background-size: cover !important;
+        background: url("photo2.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center; }
+        .production .second-row #bestsellers span div {
+          width: 30%;
+          text-align: center;
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+
+  #scroll-up-button {
+    transition: .15s all linear;
+    cursor: pointer;
+    background: #7d4e27;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: -60px;
+    border: 1px solid #fff; }
+    #scroll-up-button .fa-angle-double-up {
+      text-decoration: none;
+      padding-top: 10px;
+      padding-left: 30%;
+      color: white;
+      font-size: 28px; }
+
+  .footer {
+    padding-top: 80px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #572b17; }
+
+  #mobile-menu-button {
+    display: inline;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 2.5%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #7d4e27;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: all linear 1s; }
+    #mobile-menu-button i:first-child {
+      display: none;
+      position: relative;
+      top: 11.5px;
+      right: .5px;
+      font-size: 28px; }
+    #mobile-menu-button i:last-child {
+      display: inline;
+      position: relative;
+      top: 9px;
+      right: .5px;
+      font-size: 30px; }
+
+  #mobile-menu {
+    display: none;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #7d4e27;
+    transition: all 1s linear; }
+    #mobile-menu .main-list {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white !important;
+      position: relative;
+      margin-top: 50px;
+      margin-bottom: 50px; }
+      #mobile-menu .main-list li {
+        margin: 10px 0;
+        font-size: 24px; }
+        #mobile-menu .main-list li a {
+          color: white;
+          text-decoration: none; }
+    #mobile-menu .second-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      #mobile-menu .second-list ul li {
+        margin: 7px;
+        color: white;
+        font-size: 18px; }
+        #mobile-menu .second-list ul li p {
+          color: #fff; }
+        #mobile-menu .second-list ul li i {
+          padding-right: 5px; }
+
+  .main-bg-theme-for-catalog {
+    width: 100%;
+    height: auto;
+    background: url("catalog-bg-top.png") top center no-repeat, url("catalog-bg-bottom.png") bottom center no-repeat, url("catalog-bg.png") center repeat-y;
+    padding: 120px 0;
+    margin-top: -60px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .main-bg-theme-for-catalog h1 {
+      text-align: center;
+      color: #fff;
+      font-size: 45px;
+      font-weight: bolder;
+      font-family: 'Helvetica Neue', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .main-bg-theme-for-catalog img {
+      margin: 10px; }
+    .main-bg-theme-for-catalog .first-catalog-menu {
+      margin: 10px;
+      text-align: center; }
+      .main-bg-theme-for-catalog .first-catalog-menu li {
+        display: inline-block;
+        padding-right: 7px;
+        transition: all linear .3s; }
+        .main-bg-theme-for-catalog .first-catalog-menu li a {
+          transition: all .2s linear;
+          text-decoration: none;
+          color: #d59b81;
+          font-size: 16px; }
+          .main-bg-theme-for-catalog .first-catalog-menu li a:hover {
+            color: #ffe1d4; }
+        .main-bg-theme-for-catalog .first-catalog-menu li:last-child a {
+          color: #ffe1d4; }
+    .main-bg-theme-for-catalog .second-catalog-menu li {
+      display: inline-block;
+      cursor: pointer;
+      padding: 2.5px 10px 5px 10px;
+      background: #fff;
+      border-radius: 50px;
+      margin: 5px;
+      text-align: center !important;
+      transition: all linear .2s; }
+      .main-bg-theme-for-catalog .second-catalog-menu li div {
+        color: #6a3d1d; }
+      .main-bg-theme-for-catalog .second-catalog-menu li:first-child {
+        background: #d59b81; }
+        .main-bg-theme-for-catalog .second-catalog-menu li:first-child div {
+          color: #fff; }
+
+  .torts-catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px; }
+    .torts-catalog .torts {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2168-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts1 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts1 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts1 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2161-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts2 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts2 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts2 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-1941-300x300.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts3 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts3 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts3 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-1808-300x300.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts4 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts4 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts4 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-917-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts5 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts5 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts5 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-887-1-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts6 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts6 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts6 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2254-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts7 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts7 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts7 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2267-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts8 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts8 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts8 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-906-2-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts9 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts9 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts9 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("москва.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts10 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts10 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts10 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("IMG-20170227-WA0004-300x225.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts11 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts11 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts11 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("IMG-20170124-WA0006-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts12 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts12 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts12 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Торт-шоколадно-сметанный-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts13 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts13 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts13 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Торт-Три-шоколада-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts14 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts14 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts14 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Торт-Сладкие-тайны-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts15 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts15 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts15 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Пирог-Зебра-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts16 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts16 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts16 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Пирог-Асем-Ай-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts17 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts17 .torts-text {
+        line-height: 20px; }
+      .torts-catalog .torts17 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts17 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("москва.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts18 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts18 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts18 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Photo-89-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts19 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts19 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts19 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Photo-87-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts20 {
+      cursor: pointer;
+      margin: 5px;
+      width: 95%;
+      height: 295px;
+      border: .1px solid white;
+      border-radius: 10px;
+      overflow: hidden; }
+      .torts-catalog .torts20 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts20 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-887-1-768x512.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts-text {
+      padding-top: 10px;
+      height: 30%;
+      text-align: center;
+      color: #572b17;
+      font-size: 18px;
+      background: #ffffff; }
+
+  #torts-modal-window {
+    width: 100%;
+    height: 30%;
+    position: fixed !important;
+    top: 0%;
+    left: 0%;
+    z-index: 11;
+    display: none; }
+    #torts-modal-window .left {
+      display: inline;
+      width: 100%;
+      height: 250px; }
+      #torts-modal-window .left #img-bg-modal {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover; }
+    #torts-modal-window .right {
+      width: 100%;
+      height: 400px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #torts-modal-window .right #h1-0 {
+        font-size: 25px;
+        font-weight: 400;
+        padding-top: 5px;
+        text-align: center; }
+      #torts-modal-window .right #h3-0 {
+        padding: 15px 100px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #572b17;
+        font-weight: 400; }
+      #torts-modal-window .right #title-first-0 {
+        color: black;
+        padding: 0 20px; }
+      #torts-modal-window .right #title {
+        padding: 20px 0;
+        color: green;
+        font-weight: 800; }
+      #torts-modal-window .right input {
+        color: #8a8a8a;
+        border: 1px solid #8a8a8a;
+        width: 80%;
+        padding: 5px;
+        font-size: 16px;
+        margin: 5px; }
+      #torts-modal-window .right #wait-call {
+        width: 50%;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        padding: 5px 0;
+        border-radius: 7px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        background: #ee5635; }
+      #torts-modal-window .right #call-us {
+        width: 50%;
+        padding: 5px 0;
+        margin: 5px 0;
+        border-radius: 7px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        background: #3a801d; }
+
+  #left-scroll {
+    position: absolute;
+    top: 40%;
+    left: -5%;
+    opacity: .5;
+    font-size: 45px;
+    color: white;
+    transition: all linear 0.15s; }
+    #left-scroll:hover {
+      opacity: 1; }
+
+  #right-scroll {
+    position: absolute;
+    top: 40%;
+    right: -5%;
+    opacity: .5;
+    font-size: 45px;
+    color: white;
+    transition: all linear 0.15s; }
+    #right-scroll:hover {
+      opacity: 1; }
+
+  .fa-times {
+    color: #ffffff;
+    opacity: .5;
+    font-size: 45px !important;
+    position: absolute;
+    top: -40px;
+    right: -40px !important;
+    transition: all linear 0.15s; }
+    .fa-times:hover {
+      opacity: 1; }
+
+  .fa-search {
+    color: white;
+    font-size: 68px !important;
+    position: relative !important;
+    top: -140px !important;
+    left: 40% !important;
+    z-index: -2; }
+
+  .black-background-for-torts-catalog {
+    z-index: -1;
+    opacity: .5;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 292px; }
+
+  #modal-container1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none; }
+
+  #content > h1 {
+    color: #6a3d1d;
+    font-size: 47px;
+    font-weight: 800;
+    font-family: arial;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 50px 0; }
+
+  .production .first-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 330px;
+    overflow: hidden; }
+    .production .first-row #bakery-products {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .first-row #bakery-products span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo3.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .first-row #bakery-products span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .first-row #cakes {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .first-row #cakes:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .first-row #cakes span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("IMG_3571.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .first-row #cakes span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+  .production .second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 330px;
+    overflow: hidden; }
+    .production .second-row #festive-cakes {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .second-row #festive-cakes:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .second-row #festive-cakes span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo1.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .second-row #festive-cakes span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .second-row #bestsellers {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .second-row #bestsellers:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .second-row #bestsellers span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo2.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .second-row #bestsellers span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+
+  .footer {
+    padding-top: 80px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #572b17; }
+
+  #scroll-up-button {
+    transition: .15s all linear;
+    cursor: pointer;
+    background: #7d4e27;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: -60px; }
+    #scroll-up-button .fa-angle-double-up {
+      text-decoration: none;
+      padding-top: 10px;
+      padding-left: 30%;
+      color: white;
+      font-size: 28px; }
+
+  #mobile-menu-button {
+    display: none; }
+
+  #mobile-menu {
+    display: none; }
+
+  .bg-black-opacity-for-production {
+    display: none;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: relative;
+    bottom: 330px;
+    left: 0; }
+    .bg-black-opacity-for-production:hover {
+      -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+
+  .title {
+    z-index: 3;
+    transition: 0.15s all linear; }
+
+  #search {
+    position: inherit;
+    top: 0;
+    left: 50%; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    min-width: 768px; }
+
+  .opacity-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none; }
+
+  #modal-window {
+    background: #fff;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    display: none; }
+
+  #close-for-2gis {
+    position: fixed;
+    right: 2%;
+    top: 5%;
+    z-index: 7;
+    color: #000;
+    cursor: pointer;
+    font-size: 48px; }
+
+  #map {
+    height: 100%;
+    width: 100%; }
+
+  .doubleGis {
+    cursor: pointer;
+    color: #572b17; }
+    .doubleGis:hover {
+      text-decoration: underline; }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 170px; }
+
+  .left {
+    display: none; }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    padding: 15px;
+    margin: auto 5%; }
+    .center img {
+      width: 108px;
+      height: 116px; }
+    .center span {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      text-align: center;
+      letter-spacing: .3px;
+      font-size: 14px;
+      font-weight: 600; }
+
+  .right {
+    display: none; }
+
+  .bottom-content {
+    display: none; }
+
+  #preloader {
+    position: fixed;
+    top: 0;
+    height: 0;
+    width: 100%;
+    height: 100%; }
+    #preloader #gray {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      height: 50%;
+      margin-left: -54px;
+      margin-top: -58px;
+      background: url("logo-gray.png");
+      background-size: cover;
+      width: 108px;
+      height: 0px; }
+    #preloader #color {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      height: 50%;
+      margin-left: -54px;
+      margin-top: -58px;
+      background: url("logo.png");
+      background-size: cover;
+      width: 108px;
+      height: 116px;
+      z-index: -1; }
+
+  .main-bg-theme {
+    width: 100%;
+    height: auto;
+    background: #7d4e27;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .main-bg-theme .cake {
+      width: 50%;
+      text-align: center;
+      padding: 2% 0; }
+      .main-bg-theme .cake img {
+        width: 195px;
+        height: 142px; }
+    .main-bg-theme .best {
+      width: 70%;
+      text-align: center;
+      margin-top: 12%;
+      padding-bottom: 2%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .main-bg-theme .best h1 {
+        margin-top: -100px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #fff; }
+      .main-bg-theme .best a {
+        border-radius: 5px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 200;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background: #ee5635;
+        transition: 0.15s background linear; }
+        .main-bg-theme .best a:hover {
+          background: #ac3b19; }
+
+  #content > h1 {
+    color: #6a3d1d;
+    font-size: 34px;
+    font-weight: 800;
+    font-family: arial;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 25px 0; }
+
+  .production .first-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; }
+    .production .first-row #bakery-products {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      height: 350px;
+      text-decoration: none; }
+      .production .first-row #bakery-products span {
+        flex-basis: 100%;
+        height: 100%;
+        background-size: cover !important;
+        background: url("photo3.jpg") center center no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center; }
+        .production .first-row #bakery-products span div {
+          width: 30%;
+          text-align: center;
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .first-row #cakes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      height: 350px;
+      text-decoration: none; }
+      .production .first-row #cakes span {
+        flex-basis: 100%;
+        height: 100%;
+        background-size: cover !important;
+        background: url("IMG_3571.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center; }
+        .production .first-row #cakes span div {
+          width: 30%;
+          text-align: center;
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+  .production .second-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; }
+    .production .second-row #festive-cakes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      height: 350px;
+      text-decoration: none; }
+      .production .second-row #festive-cakes span {
+        flex-basis: 100%;
+        height: 100%;
+        background-size: cover !important;
+        background: url("photo1.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center; }
+        .production .second-row #festive-cakes span div {
+          width: 30%;
+          text-align: center;
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .second-row #bestsellers {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      height: 350px;
+      text-decoration: none; }
+      .production .second-row #bestsellers span {
+        flex-basis: 100%;
+        height: 100%;
+        background-size: cover !important;
+        background: url("photo2.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center; }
+        .production .second-row #bestsellers span div {
+          width: 30%;
+          text-align: center;
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+
+  #scroll-up-button {
+    transition: .15s all linear;
+    cursor: pointer;
+    background: #7d4e27;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: -60px;
+    border: 1px solid #fff; }
+    #scroll-up-button .fa-angle-double-up {
+      text-decoration: none;
+      padding-top: 10px;
+      padding-left: 30%;
+      color: white;
+      font-size: 28px; }
+
+  .footer {
+    padding-top: 80px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #572b17; }
+
+  #mobile-menu-button {
+    display: inline;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: #7d4e27;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: all linear .5s; }
+    #mobile-menu-button i:first-child {
+      display: none;
+      position: relative;
+      top: 11.5px;
+      right: .5px;
+      font-size: 28px; }
+    #mobile-menu-button i:last-child {
+      display: inline;
+      position: relative;
+      top: 9px;
+      right: .5px;
+      font-size: 30px; }
+
+  #mobile-menu {
+    display: none;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #7d4e27; }
+    #mobile-menu .main-list {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white !important;
+      position: relative;
+      margin-top: 50px;
+      margin-bottom: 50px; }
+      #mobile-menu .main-list li {
+        margin: 10px 0;
+        font-size: 24px; }
+        #mobile-menu .main-list li a {
+          color: white;
+          text-decoration: none; }
+    #mobile-menu .second-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      #mobile-menu .second-list ul li {
+        margin: 7px;
+        color: white;
+        font-size: 18px; }
+        #mobile-menu .second-list ul li p {
+          color: #fff; }
+        #mobile-menu .second-list ul li i {
+          padding-right: 5px; }
+
+  .main-bg-theme-for-catalog {
+    width: 100%;
+    height: auto;
+    background: url("catalog-bg-top.png") top center no-repeat, url("catalog-bg-bottom.png") bottom center no-repeat, url("catalog-bg.png") center repeat-y;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .main-bg-theme-for-catalog h1 {
+      text-align: center;
+      color: #fff;
+      font-size: 45px;
+      font-weight: bolder;
+      font-family: 'Helvetica Neue', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .main-bg-theme-for-catalog img {
+      margin: 10px; }
+    .main-bg-theme-for-catalog .first-catalog-menu {
+      margin: 10px; }
+      .main-bg-theme-for-catalog .first-catalog-menu li {
+        display: inline-block;
+        padding-right: 10px;
+        transition: all linear .3s; }
+        .main-bg-theme-for-catalog .first-catalog-menu li a {
+          transition: all .2s linear;
+          text-decoration: none;
+          color: #d59b81;
+          font-size: 18px; }
+          .main-bg-theme-for-catalog .first-catalog-menu li a:hover {
+            color: #ffe1d4; }
+        .main-bg-theme-for-catalog .first-catalog-menu li:last-child a {
+          color: #ffe1d4; }
+    .main-bg-theme-for-catalog .second-catalog-menu li {
+      display: inline-block;
+      cursor: pointer;
+      padding: 2.5px 10px 5px 10px;
+      background: #fff;
+      border-radius: 50px;
+      margin-right: 10px;
+      transition: all linear .2s; }
+      .main-bg-theme-for-catalog .second-catalog-menu li div {
+        color: #6a3d1d; }
+      .main-bg-theme-for-catalog .second-catalog-menu li:first-child {
+        background: #d59b81; }
+        .main-bg-theme-for-catalog .second-catalog-menu li:first-child div {
+          color: #fff; }
+
+  .torts-catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px; }
+    .torts-catalog .torts {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all linear .5s; }
+      .torts-catalog .torts .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2168-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts1 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts1 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts1 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2161-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts2 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts2 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts2 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-1941-300x300.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts3 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts3 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts3 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-1808-300x300.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts4 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts4 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts4 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-917-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts5 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts5 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts5 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-887-1-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts6 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts6 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts6 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2254-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts7 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts7 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts7 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2267-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts8 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts8 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts8 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-906-2-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts9 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts9 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts9 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("москва.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts10 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts10 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts10 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("IMG-20170227-WA0004-300x225.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts11 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts11 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts11 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("IMG-20170124-WA0006-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts12 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts12 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts12 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Торт-шоколадно-сметанный-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts13 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts13 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts13 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Торт-Три-шоколада-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts14 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts14 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts14 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Торт-Сладкие-тайны-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts15 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts15 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts15 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Пирог-Зебра-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts16 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts16 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts16 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Пирог-Асем-Ай-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts17 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts17 .torts-text {
+        line-height: 20px; }
+      .torts-catalog .torts17 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts17 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("москва.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts18 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts18 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts18 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Photo-89-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts19 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80%;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts19 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts19 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Photo-87-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts20 {
+      cursor: pointer;
+      margin: 15px;
+      width: 80% !important;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts20 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts20 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-887-1-768x512.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts-text {
+      padding-top: 10px;
+      height: 30%;
+      text-align: center;
+      color: #572b17;
+      font-size: 18px;
+      background: #ffffff; }
+
+  #torts-modal-window {
+    width: 100%;
+    height: 30%;
+    position: fixed !important;
+    top: 0%;
+    left: 0%;
+    z-index: 11;
+    display: none; }
+    #torts-modal-window .left {
+      display: inline;
+      width: 100%;
+      height: 250px; }
+      #torts-modal-window .left #img-bg-modal {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover; }
+    #torts-modal-window .right {
+      width: 100%;
+      height: 400px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #torts-modal-window .right #h1-0 {
+        font-size: 25px;
+        font-weight: 400;
+        padding-top: 5px;
+        text-align: center; }
+      #torts-modal-window .right #h3-0 {
+        padding: 15px 100px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #572b17;
+        font-weight: 400; }
+      #torts-modal-window .right #title-first-0 {
+        color: black;
+        padding: 0 20px; }
+      #torts-modal-window .right #title {
+        padding: 20px 0;
+        color: green;
+        font-weight: 800; }
+      #torts-modal-window .right input {
+        color: #8a8a8a;
+        border: 1px solid #8a8a8a;
+        width: 80%;
+        padding: 5px;
+        font-size: 16px;
+        margin: 5px; }
+      #torts-modal-window .right #wait-call {
+        width: 50%;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        padding: 5px 0;
+        border-radius: 7px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        background: #ee5635; }
+      #torts-modal-window .right #call-us {
+        width: 50%;
+        padding: 5px 0;
+        margin: 5px 0;
+        border-radius: 7px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        background: #3a801d; }
+
+  #left-scroll {
+    position: absolute;
+    top: 40%;
+    left: -5%;
+    opacity: .5;
+    font-size: 45px;
+    color: white;
+    transition: all linear 0.15s; }
+    #left-scroll:hover {
+      opacity: 1; }
+
+  #right-scroll {
+    position: absolute;
+    top: 40%;
+    right: -5%;
+    opacity: .5;
+    font-size: 45px;
+    color: white;
+    transition: all linear 0.15s; }
+    #right-scroll:hover {
+      opacity: 1; }
+
+  .fa-times {
+    color: #ffffff;
+    opacity: .5;
+    font-size: 45px !important;
+    position: absolute;
+    top: -40px;
+    right: -40px !important;
+    transition: all linear 0.15s; }
+    .fa-times:hover {
+      opacity: 1; }
+
+  .fa-search {
+    color: white;
+    font-size: 68px !important;
+    position: relative !important;
+    top: -140px !important;
+    left: 40% !important;
+    z-index: -2; }
+
+  .black-background-for-torts-catalog {
+    z-index: -1;
+    opacity: .5;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 292px; }
+
+  #modal-container1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none; }
+
+  #content > h1 {
+    color: #6a3d1d;
+    font-size: 47px;
+    font-weight: 800;
+    font-family: arial;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 50px 0; }
+
+  .production .first-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 330px;
+    overflow: hidden; }
+    .production .first-row #bakery-products {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .first-row #bakery-products span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo3.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .first-row #bakery-products span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .first-row #cakes {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .first-row #cakes:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .first-row #cakes span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("IMG_3571.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .first-row #cakes span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+  .production .second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 330px;
+    overflow: hidden; }
+    .production .second-row #festive-cakes {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .second-row #festive-cakes:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .second-row #festive-cakes span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo1.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .second-row #festive-cakes span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .second-row #bestsellers {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .second-row #bestsellers:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .second-row #bestsellers span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo2.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .second-row #bestsellers span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+
+  .footer {
+    padding-top: 80px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #572b17; }
+
+  #scroll-up-button {
+    transition: .15s all linear;
+    cursor: pointer;
+    background: #7d4e27;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: -60px; }
+    #scroll-up-button .fa-angle-double-up {
+      text-decoration: none;
+      padding-top: 10px;
+      padding-left: 30%;
+      color: white;
+      font-size: 28px; }
+
+  #mobile-menu-button {
+    display: none; }
+
+  #mobile-menu {
+    display: none; }
+
+  .bg-black-opacity-for-production {
+    display: none;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: relative;
+    bottom: 330px;
+    left: 0; }
+    .bg-black-opacity-for-production:hover {
+      -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+
+  .title {
+    z-index: 3;
+    transition: 0.15s all linear; }
+
+  #search {
+    position: inherit;
+    top: 0;
+    left: 50%; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    min-width: 992px; }
+
+  .opacity-background {
+    background: #fff;
+    z-index: 11;
+    width: 75%;
+    height: 85%;
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    margin-left: -12.5%;
+    margin-top: -3.3333333333%;
+    display: none; }
+
+  #modal-window {
+    background: #fff;
+    z-index: 11;
+    width: 75%;
+    height: 85%;
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    margin-left: -12.5%;
+    margin-top: -5%;
+    display: none; }
+
+  #close-for-2gis {
+    display: none; }
+
+  #map {
+    height: 100%;
+    width: 100%; }
+
+  .doubleGis {
+    cursor: pointer;
+    color: #572b17; }
+    .doubleGis:hover {
+      text-decoration: underline; }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 170px; }
+
+  .left {
+    width: 42%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center; }
+    .left div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 7px; }
+      .left div:nth-child(1) {
+        margin-right: 7%; }
+      .left div:nth-child(2) {
+        margin-right: 7%; }
+      .left div a {
+        margin-top: 5px;
+        color: #713d1e;
+        font-size: 14px; }
+      .left div div {
+        width: 45px;
+        height: 45px;
+        background: #a07238;
+        font-size: 26px;
+        border-radius: 50%; }
+        .left div div .fa {
+          color: white; }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 16%;
+    height: 100%; }
+    .center img {
+      margin-top: 20px;
+      width: 108px;
+      height: 116px;
+      vertical-align: middle; }
+    .center span {
+      margin-top: 15px;
+      text-align: center;
+      letter-spacing: .3px;
+      font-size: 14px;
+      font-weight: 600; }
+
+  .right {
+    display: inline;
+    color: #482914;
+    width: 42%;
+    height: 100%; }
+    .right ul {
+      font-size: 16px;
+      padding-top: 25px;
+      padding-left: 90px;
+      line-height: 25px; }
+      .right ul li:hover {
+        text-decoration: underline; }
+      .right ul li i {
+        padding-right: 15px; }
+
+  .bottom-content {
+    margin-top: 20px; }
+    .bottom-content ul {
+      text-align: center; }
+      .bottom-content ul li {
+        padding: 0 20px;
+        display: inline-block; }
+        .bottom-content ul li a {
+          text-decoration: none;
+          color: #572b17; }
+          .bottom-content ul li a:hover {
+            text-decoration: underline; }
+
+  #preloader {
+    position: fixed;
+    top: 0;
+    height: 0;
+    width: 100%;
+    height: 100%; }
+    #preloader #gray {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      height: 50%;
+      margin-left: -54px;
+      margin-top: -58px;
+      background: url("logo-gray.png");
+      background-size: cover;
+      width: 108px;
+      height: 0px; }
+    #preloader #color {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      height: 50%;
+      margin-left: -54px;
+      margin-top: -58px;
+      background: url("logo.png");
+      background-size: cover;
+      width: 108px;
+      height: 116px;
+      z-index: -1; }
+
+  .main-bg-theme {
+    width: 100%;
+    height: 200px;
+    min-height: 658px;
+    background: url("main-bg.png") top center no-repeat;
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .main-bg-theme .cake {
+      margin-right: 7%;
+      width: 30%; }
+      .main-bg-theme .cake img {
+        width: auto;
+        height: auto; }
+    .main-bg-theme .best {
+      margin-left: 7%;
+      width: 30%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .main-bg-theme .best h1 {
+        margin-top: -100px;
+        font-size: 28px;
+        font-weight: 400;
+        color: #fff; }
+      .main-bg-theme .best a {
+        border-radius: 5px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 200;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background: #ee5635;
+        transition: 0.15s background linear; }
+        .main-bg-theme .best a:hover {
+          background: #ac3b19; }
+
+  #content > h1 {
+    color: #6a3d1d;
+    font-size: 47px;
+    font-weight: 800;
+    font-family: arial;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 50px 0; }
+
+  .production .first-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 330px;
+    overflow: hidden; }
+    .production .first-row #bakery-products {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .first-row #bakery-products:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .first-row #bakery-products span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo3.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .first-row #bakery-products span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .first-row #cakes {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .first-row #cakes:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .first-row #cakes span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("IMG_3571.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .first-row #cakes span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+  .production .second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 330px;
+    overflow: hidden; }
+    .production .second-row #festive-cakes {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .second-row #festive-cakes:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .second-row #festive-cakes span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo1.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .second-row #festive-cakes span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .second-row #bestsellers {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .second-row #bestsellers:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .second-row #bestsellers span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo2.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .second-row #bestsellers span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+
+  .footer {
+    padding-top: 80px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #572b17; }
+
+  #scroll-up-button {
+    transition: .15s all linear;
+    cursor: pointer;
+    background: #7d4e27;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: -60px;
+    border: 1px solid #fff; }
+    #scroll-up-button .fa-angle-double-up {
+      text-decoration: none;
+      padding-top: 10px;
+      padding-left: 30%;
+      color: white;
+      font-size: 28px; }
+
+  #mobile-menu {
+    display: none; }
+
+  #mobile-menu-button {
+    display: none; }
+
+  .bg-black-opacity-for-production {
+    display: none;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: relative;
+    bottom: 330px;
+    left: 0; }
+    .bg-black-opacity-for-production:hover {
+      -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+
+  .title {
+    z-index: 3;
+    transition: 0.15s all linear; }
+
+  .main-bg-theme-for-catalog {
+    width: 100%;
+    height: auto;
+    background: url("catalog-bg-top.png") top center no-repeat, url("catalog-bg-bottom.png") bottom center no-repeat, url("catalog-bg.png") center repeat-y;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .main-bg-theme-for-catalog h1 {
+      text-align: center;
+      color: #fff;
+      font-size: 45px;
+      font-weight: bolder;
+      font-family: 'Helvetica Neue', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .main-bg-theme-for-catalog img {
+      margin: 10px; }
+    .main-bg-theme-for-catalog .first-catalog-menu {
+      margin: 10px; }
+      .main-bg-theme-for-catalog .first-catalog-menu li {
+        display: inline-block;
+        padding-right: 10px;
+        transition: all linear .3s; }
+        .main-bg-theme-for-catalog .first-catalog-menu li a {
+          transition: all .2s linear;
+          text-decoration: none;
+          color: #d59b81;
+          font-size: 18px; }
+          .main-bg-theme-for-catalog .first-catalog-menu li a:hover {
+            color: #ffe1d4; }
+        .main-bg-theme-for-catalog .first-catalog-menu li:last-child a {
+          color: #ffe1d4; }
+    .main-bg-theme-for-catalog .second-catalog-menu li {
+      display: inline-block;
+      cursor: pointer;
+      padding: 2.5px 10px 5px 10px;
+      background: #fff;
+      border-radius: 50px;
+      margin-right: 10px;
+      transition: all linear .2s; }
+      .main-bg-theme-for-catalog .second-catalog-menu li div {
+        color: #6a3d1d; }
+      .main-bg-theme-for-catalog .second-catalog-menu li:first-child {
+        background: #d59b81; }
+        .main-bg-theme-for-catalog .second-catalog-menu li:first-child div {
+          color: #fff; }
+
+  .torts-catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px; }
+    .torts-catalog .torts {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all linear .5s; }
+      .torts-catalog .torts .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2168-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts1 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts1 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts1 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2161-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts2 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts2 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts2 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-1941-300x300.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts3 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts3 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts3 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-1808-300x300.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts4 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts4 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts4 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-917-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts5 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts5 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts5 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-887-1-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts6 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts6 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts6 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2254-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts7 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts7 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts7 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2267-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts8 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts8 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts8 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-906-2-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts9 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts9 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts9 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("москва.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts10 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts10 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts10 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("IMG-20170227-WA0004-300x225.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts11 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts11 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts11 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("IMG-20170124-WA0006-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts12 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts12 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts12 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Торт-шоколадно-сметанный-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts13 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts13 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts13 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Торт-Три-шоколада-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts14 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts14 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts14 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Торт-Сладкие-тайны-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts15 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts15 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts15 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Пирог-Зебра-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts16 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts16 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts16 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Пирог-Асем-Ай-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts17 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts17 .torts-text {
+        line-height: 20px; }
+      .torts-catalog .torts17 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts17 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("москва.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts18 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts18 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts18 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Photo-89-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts19 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts19 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts19 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Photo-87-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts20 {
+      cursor: pointer;
+      margin: 15px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts20 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts20 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-887-1-768x512.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts-text {
+      padding-top: 10px;
+      height: 30%;
+      text-align: center;
+      color: #572b17;
+      font-size: 18px;
+      background: #ffffff; }
+
+  #torts-modal-window {
+    width: 85%;
+    height: 68%;
+    position: fixed;
+    top: 15%;
+    left: 8%;
+    z-index: 11;
+    display: none; }
+    #torts-modal-window .left {
+      border-top: solid 1px #a5a5a5;
+      border-bottom: solid 1px #a5a5a5;
+      border-left: solid 1px #a5a5a5;
+      border-radius: 15px 0 0 15px;
+      overflow: hidden;
+      width: 54.7% !important;
+      height: 100%;
+      float: left; }
+      #torts-modal-window .left #img-bg-modal {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover; }
+    #torts-modal-window .right {
+      border-top: solid 1px #a5a5a5;
+      border-bottom: solid 1px #a5a5a5;
+      border-right: solid 1px #a5a5a5;
+      border-radius: 0 15px 15px 0;
+      overflow: hidden;
+      width: 45%;
+      height: 100%;
+      float: right;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #torts-modal-window .right #h1-0 {
+        font-size: 25px;
+        font-weight: 400;
+        padding-top: 5px;
+        text-align: center !important; }
+      #torts-modal-window .right #h3-0 {
+        padding: 15px 100px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #572b17;
+        font-weight: 400; }
+      #torts-modal-window .right #title-first-0 {
+        color: black;
+        padding: 0 20px; }
+      #torts-modal-window .right #title {
+        padding: 20px 0;
+        color: green;
+        font-weight: 800; }
+      #torts-modal-window .right input {
+        color: #8a8a8a;
+        border: 1px solid #8a8a8a;
+        width: 80%;
+        padding: 5px;
+        font-size: 16px;
+        margin: 5px; }
+      #torts-modal-window .right #wait-call {
+        width: 50%;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        padding: 5px 0;
+        border-radius: 7px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        background: #ee5635; }
+      #torts-modal-window .right #call-us {
+        width: 50%;
+        padding: 5px 0;
+        margin: 5px 0;
+        border-radius: 7px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        background: #3a801d; }
+
+  #left-scroll {
+    position: absolute;
+    top: 40%;
+    left: -5%;
+    opacity: .5;
+    font-size: 45px;
+    color: white;
+    transition: all linear 0.15s; }
+    #left-scroll:hover {
+      opacity: 1; }
+
+  #right-scroll {
+    position: absolute;
+    top: 40%;
+    right: -5%;
+    opacity: .5;
+    font-size: 45px;
+    color: white;
+    transition: all linear 0.15s; }
+    #right-scroll:hover {
+      opacity: 1; }
+
+  .fa-times {
+    color: #ffffff;
+    opacity: .5;
+    font-size: 45px !important;
+    position: absolute;
+    top: -40px;
+    right: -40px !important;
+    transition: all linear 0.15s; }
+    .fa-times:hover {
+      opacity: 1; }
+
+  .fa-search {
+    color: white;
+    font-size: 68px !important;
+    position: relative !important;
+    top: -140px !important;
+    left: 40% !important;
+    z-index: -2; }
+
+  .black-background-for-torts-catalog {
+    z-index: -1;
+    opacity: .5;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 292px; }
+
+  #modal-container1 {
+    position: fixed;
+    top: 3.7%;
+    left: 12.5%;
+    background: #000;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none; }
+
+  #content > h1 {
+    color: #6a3d1d;
+    font-size: 47px;
+    font-weight: 800;
+    font-family: arial;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 50px 0; }
+
+  .production .first-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 330px;
+    overflow: hidden; }
+    .production .first-row #bakery-products {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .first-row #bakery-products span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo3.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .first-row #bakery-products span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .first-row #cakes {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .first-row #cakes:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .first-row #cakes span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("IMG_3571.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .first-row #cakes span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+  .production .second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 330px;
+    overflow: hidden; }
+    .production .second-row #festive-cakes {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .second-row #festive-cakes:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .second-row #festive-cakes span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo1.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .second-row #festive-cakes span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .second-row #bestsellers {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .second-row #bestsellers:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .second-row #bestsellers span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo2.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .second-row #bestsellers span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+
+  .footer {
+    padding-top: 80px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #572b17; }
+
+  #scroll-up-button {
+    transition: .15s all linear;
+    cursor: pointer;
+    background: #7d4e27;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: -60px; }
+    #scroll-up-button .fa-angle-double-up {
+      text-decoration: none;
+      padding-top: 10px;
+      padding-left: 30%;
+      color: white;
+      font-size: 28px; }
+
+  #mobile-menu-button {
+    display: none; }
+
+  #mobile-menu {
+    display: none; }
+
+  .bg-black-opacity-for-production {
+    display: none;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: relative;
+    bottom: 330px;
+    left: 0; }
+    .bg-black-opacity-for-production:hover {
+      -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+
+  .title {
+    z-index: 3;
+    transition: 0.15s all linear; }
+
+  #search {
+    position: inherit;
+    top: 0;
+    left: 50%; } }
+@media (min-width: 1200px) {
+  body {
+    min-width: 1440px; }
+
+  .opacity-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none; }
+
+  #modal-window {
+    background: #fff;
+    z-index: 11;
+    width: 75%;
+    height: 85%;
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    margin-left: -12.5%;
+    margin-top: -3.3333333333%;
+    display: none; }
+
+  #close-for-2gis {
+    display: none; }
+
+  #map {
+    height: 100%;
+    width: 100%; }
+
+  .doubleGis {
+    cursor: pointer;
+    color: #572b17; }
+    .doubleGis:hover {
+      text-decoration: underline; }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 170px; }
+
+  .left {
+    width: 42%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center; }
+    .left div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 7px; }
+      .left div:nth-child(1) {
+        margin-right: 7%; }
+      .left div:nth-child(2) {
+        margin-right: 7%; }
+      .left div a {
+        margin-top: 5px;
+        color: #713d1e;
+        font-size: 14px; }
+      .left div div {
+        width: 45px;
+        height: 45px;
+        background: #a07238;
+        font-size: 26px;
+        border-radius: 50%; }
+        .left div div .fa {
+          color: white; }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 16%;
+    height: 100%; }
+    .center img {
+      margin-top: 1%;
+      width: 108px;
+      height: 116px;
+      vertical-align: middle; }
+    .center span {
+      margin-top: 15px;
+      text-align: center;
+      letter-spacing: .3px;
+      font-size: 14px;
+      font-weight: 600; }
+
+  .right {
+    display: inline;
+    color: #482914;
+    width: 42%;
+    height: 100%; }
+    .right ul {
+      font-size: 16px;
+      padding-top: 25px;
+      padding-left: 90px;
+      line-height: 25px; }
+      .right ul li:hover {
+        text-decoration: underline; }
+      .right ul li i {
+        padding-right: 15px; }
+
+  .bottom-content {
+    margin-top: 20px; }
+    .bottom-content ul {
+      text-align: center; }
+      .bottom-content ul li {
+        padding: 0 20px;
+        display: inline-block; }
+        .bottom-content ul li a {
+          text-decoration: none;
+          color: #572b17; }
+          .bottom-content ul li a:hover {
+            text-decoration: underline; }
+
+  #preloader {
+    position: fixed;
+    top: 0;
+    height: 0;
+    width: 100%;
+    height: 100%; }
+    #preloader #gray {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      height: 50%;
+      margin-left: -54px;
+      margin-top: -58px;
+      background: url("logo-gray.png");
+      background-size: cover;
+      width: 108px;
+      height: 0px; }
+    #preloader #color {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      height: 50%;
+      margin-left: -54px;
+      margin-top: -58px;
+      background: url("logo.png");
+      background-size: cover;
+      width: 108px;
+      height: 116px;
+      z-index: -1; }
+
+  .main-bg-theme {
+    width: 100%;
+    height: 200px;
+    min-height: 658px;
+    background: url("main-bg.png") top center no-repeat;
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .main-bg-theme .cake {
+      margin-left: 15%;
+      width: 30%; }
+      .main-bg-theme .cake img {
+        width: auto;
+        height: auto; }
+    .main-bg-theme .best {
+      margin-right: 15%;
+      width: 30%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .main-bg-theme .best h1 {
+        margin-top: -100px;
+        font-size: 28px;
+        font-weight: 400;
+        color: #fff; }
+      .main-bg-theme .best a {
+        border-radius: 5px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 200;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background: #ee5635;
+        transition: 0.15s background linear; }
+        .main-bg-theme .best a:hover {
+          background: #ac3b19; }
+
+  .main-bg-theme-for-catalog {
+    width: 100%;
+    height: auto;
+    background: url("catalog-bg-top.png") top center no-repeat, url("catalog-bg-bottom.png") bottom center no-repeat, url("catalog-bg.png") center repeat-y;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .main-bg-theme-for-catalog h1 {
+      text-align: center;
+      color: #fff;
+      font-size: 45px;
+      font-weight: bolder;
+      font-family: 'Helvetica Neue', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .main-bg-theme-for-catalog img {
+      margin: 10px; }
+    .main-bg-theme-for-catalog .first-catalog-menu {
+      margin: 10px; }
+      .main-bg-theme-for-catalog .first-catalog-menu li {
+        display: inline-block;
+        padding-right: 10px;
+        transition: all linear .3s; }
+        .main-bg-theme-for-catalog .first-catalog-menu li a {
+          transition: all .2s linear;
+          text-decoration: none;
+          color: #d59b81;
+          font-size: 18px; }
+          .main-bg-theme-for-catalog .first-catalog-menu li a:hover {
+            color: #ffe1d4; }
+        .main-bg-theme-for-catalog .first-catalog-menu li:last-child a {
+          color: #ffe1d4; }
+    .main-bg-theme-for-catalog .second-catalog-menu li {
+      display: inline-block;
+      cursor: pointer;
+      padding: 2.5px 10px 5px 10px;
+      background: #fff;
+      border-radius: 50px;
+      margin-right: 10px;
+      transition: all linear .2s; }
+      .main-bg-theme-for-catalog .second-catalog-menu li div {
+        color: #6a3d1d; }
+      .main-bg-theme-for-catalog .second-catalog-menu li:first-child {
+        background: #d59b81; }
+        .main-bg-theme-for-catalog .second-catalog-menu li:first-child div {
+          color: #fff; }
+
+  .torts-catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 40px; }
+    .torts-catalog .torts {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all linear .5s; }
+      .torts-catalog .torts .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2168-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts1 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts1 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts1 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2161-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts2 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts2 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts2 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-1941-300x300.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts3 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts3 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts3 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-1808-300x300.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts4 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts4 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts4 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-917-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts5 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts5 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts5 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-887-1-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts6 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts6 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts6 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2254-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts7 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts7 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts7 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-2267-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts8 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts8 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts8 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-906-2-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts9 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts9 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts9 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("москва.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts10 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts10 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts10 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("IMG-20170227-WA0004-300x225.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts11 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts11 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts11 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("IMG-20170124-WA0006-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts12 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts12 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts12 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Торт-шоколадно-сметанный-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts13 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts13 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts13 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Торт-Три-шоколада-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts14 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts14 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts14 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Торт-Сладкие-тайны-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts15 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts15 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts15 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Пирог-Зебра-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts16 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts16 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts16 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Пирог-Асем-Ай-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts17 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts17 .torts-text {
+        line-height: 20px; }
+      .torts-catalog .torts17 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts17 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("москва.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts18 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts18 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts18 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Photo-89-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts19 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts19 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts19 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("Photo-87-300x200.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts20 {
+      cursor: pointer;
+      margin: 15px 35px;
+      width: 280px;
+      height: 320px;
+      border: .1px solid white;
+      border-radius: 15px;
+      overflow: hidden; }
+      .torts-catalog .torts20 .torts-img {
+        width: auto;
+        height: 70%; }
+        .torts-catalog .torts20 .torts-img .img {
+          width: 100%;
+          height: 100%;
+          background: url("из-планшета-887-1-768x512.jpg") center center no-repeat;
+          background-size: cover; }
+    .torts-catalog .torts-text {
+      padding-top: 10px;
+      height: 30%;
+      text-align: center;
+      color: #572b17;
+      font-size: 18px;
+      background: #ffffff; }
+
+  #torts-modal-window {
+    width: 1000px;
+    height: 600px;
+    position: fixed;
+    top: 15%;
+    left: 15%;
+    z-index: 11;
+    display: none; }
+    #torts-modal-window .left {
+      border-top: solid 1px #a5a5a5;
+      border-bottom: solid 1px #a5a5a5;
+      border-left: solid 1px #a5a5a5;
+      border-radius: 15px 0 0 15px;
+      overflow: hidden;
+      width: 48.8%;
+      height: 100%;
+      float: left; }
+      #torts-modal-window .left #img-bg-modal {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover; }
+    #torts-modal-window .right {
+      border-top: solid 1px #a5a5a5;
+      border-bottom: solid 1px #a5a5a5;
+      border-right: solid 1px #a5a5a5;
+      border-radius: 0 15px 15px 0;
+      overflow: hidden;
+      padding: 30px;
+      width: 45%;
+      height: 90%;
+      float: right;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #torts-modal-window .right #h1-0 {
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center !important; }
+      #torts-modal-window .right #h3-0 {
+        padding: 15px 170px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #572b17;
+        font-weight: 400; }
+      #torts-modal-window .right #title-first-0 {
+        color: black; }
+      #torts-modal-window .right #title {
+        padding: 20px 0;
+        color: black;
+        font-weight: 800; }
+      #torts-modal-window .right input {
+        color: #8a8a8a;
+        border: 1px solid #8a8a8a;
+        width: 80%;
+        padding: 10px;
+        font-size: 16px;
+        margin: 10px 0; }
+      #torts-modal-window .right #wait-call {
+        width: 70%;
+        padding: 10px 0;
+        margin: 10px 0;
+        border-radius: 7px;
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
+        background: #ee5635; }
+      #torts-modal-window .right #call-us {
+        width: 70%;
+        padding: 10px 0;
+        margin: 10px 0;
+        border-radius: 7px;
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
+        background: #3a801d; }
+
+  #left-scroll {
+    position: absolute;
+    top: 40%;
+    left: -15%;
+    opacity: .5;
+    font-size: 88px;
+    color: white;
+    transition: all linear 0.15s; }
+    #left-scroll:hover {
+      opacity: 1; }
+
+  #right-scroll {
+    position: absolute;
+    top: 40%;
+    right: -15%;
+    opacity: .5;
+    font-size: 88px;
+    color: white;
+    transition: all linear 0.15s; }
+    #right-scroll:hover {
+      opacity: 1; }
+
+  .fa-times {
+    color: #8a8a8a;
+    font-size: 45px !important;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: color linear 0.15s; }
+    .fa-times:hover {
+      color: #5a5a5a; }
+
+  .fa-search {
+    color: white;
+    font-size: 68px !important;
+    position: relative !important;
+    top: -140px !important;
+    left: 40% !important;
+    z-index: -2; }
+
+  .black-background-for-torts-catalog {
+    z-index: -1;
+    opacity: .5;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 292px; }
+
+  #modal-container1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none; }
+
+  #content > h1 {
+    color: #6a3d1d;
+    font-size: 47px;
+    font-weight: 800;
+    font-family: arial;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 50px 0; }
+
+  .production .first-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 330px;
+    overflow: hidden; }
+    .production .first-row #bakery-products {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .first-row #bakery-products span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo3.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .first-row #bakery-products span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .first-row #cakes {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .first-row #cakes:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .first-row #cakes span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("IMG_3571.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .first-row #cakes span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+  .production .second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 330px;
+    overflow: hidden; }
+    .production .second-row #festive-cakes {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .second-row #festive-cakes:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .second-row #festive-cakes span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo1.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .second-row #festive-cakes span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: bolder; }
+    .production .second-row #bestsellers {
+      text-decoration: none;
+      display: block;
+      width: 450px;
+      height: 330px;
+      transition: all .1s linear; }
+      .production .second-row #bestsellers:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+      .production .second-row #bestsellers span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url("photo2.jpg") top center no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .production .second-row #bestsellers span div {
+          color: #572b17;
+          background: #fff;
+          opacity: .75;
+          padding: 25px 40px 20px 40px;
+          font-size: 24px;
+          font-weight: bolder; }
+
+  .footer {
+    padding-top: 80px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #572b17; }
+
+  #scroll-up-button {
+    transition: .15s all linear;
+    cursor: pointer;
+    background: #7d4e27;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: -60px; }
+    #scroll-up-button .fa-angle-double-up {
+      text-decoration: none;
+      padding-top: 10px;
+      padding-left: 30%;
+      color: white;
+      font-size: 28px; }
+
+  #mobile-menu-button {
+    display: none; }
+
+  #mobile-menu {
+    display: none; }
+
+  .bg-black-opacity-for-production {
+    display: none;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: relative;
+    bottom: 330px;
+    left: 0; }
+    .bg-black-opacity-for-production:hover {
+      -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
+
+  .title {
+    z-index: 3;
+    transition: 0.15s all linear; }
+
+  #search {
+    position: inherit;
+    top: 0;
+    left: 50%; } }
+
+/*# sourceMappingURL=style.css.map */
